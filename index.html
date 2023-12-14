@@ -10,41 +10,16 @@
 </head>
 
 <body>
+<div>
+  <ul>
+    <li><a href="#" onclick="loadSwagger('pet_store.yaml')">Swagger 1</a></li>
+    <li><a href="#" onclick="loadSwagger('openapi.yaml')">Swagger 2</a></li>
+  </ul>
+</div>
 <div id="swagger-ui"></div>
-
-<!-- Add links to your Swagger documents -->
-<ul>
-  <li><a href="#" onclick="loadSwagger('pet_store.yaml')">Swagger 1</a></li>
-  <li><a href="#" onclick="loadSwagger('openapi.yaml')">Swagger 2</a></li>
-</ul>
-
+<a href="index.html">HOME</a>
 <script src="dist/swagger-ui-bundle.js" charset="UTF-8"></script>
 <script src="dist/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
-<script src="dist/swagger-initializer.js" charset="UTF-8"></script>
-
-<script>
-  // Function to load Swagger document dynamically
-  function loadSwagger(swaggerFile) {
-    // Destroy the existing Swagger UI instance if it exists
-    if (window.ui) {
-      window.ui.destroy();
-    }
-
-    // Load the new Swagger document
-    window.ui = SwaggerUIBundle({
-      url: swaggerFile,
-      dom_id: '#swagger-ui',
-      deepLinking: true,
-      presets: [
-        SwaggerUIBundle.presets.apis,
-        SwaggerUIStandalonePreset
-      ],
-      plugins: [
-        SwaggerUIBundle.plugins.DownloadUrl
-      ],
-      layout: "StandaloneLayout"
-    });
-  }
-</script>
+<script src="dist/load-swagger.js" charset="UTF-8"></script>
 </body>
 </html>
