@@ -1,6 +1,6 @@
 window.onload = function () {
   // Variable to store the Swagger document URL
-  var swaggerUrl = "pet_store.yaml"; // Default Swagger document
+  // var swaggerUrl = "pet_store.yaml"; // Default Swagger document
 
   // Function to load Swagger document dynamically
   function loadSwagger() {
