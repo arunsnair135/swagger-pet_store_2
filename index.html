@@ -7,14 +7,22 @@
   <link rel="stylesheet" type="text/css" href="dist/index.css" />
   <link rel="icon" type="image/png" href="dist/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="dist/favicon-16x16.png" sizes="16x16" />
+  <style>
+    #home-link {
+      display: none;
+    }
+    .swagger-link {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
 <div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#" onclick="loadSwagger('pet_store.yaml')">Swagger 1</a></li>
-    <li class="list-group-item"><a href="#" onclick="loadSwagger('openapi.yaml')">Swagger 2</a></li>
-    <li><a href="index.html">HOME</a></li>
+  <ul>
+    <li id="home-link"><a href="index.html">HOME</a></li>
+    <li class="swagger-link"><a href="#" onclick="loadSwagger('pet_store.yaml')">Swagger 1</a></li>
+    <li class="swagger-link"><a href="#" onclick="loadSwagger('openapi.yaml')">Swagger 2</a></li>
   </ul>
 </div>
 <div id="swagger-ui"></div>

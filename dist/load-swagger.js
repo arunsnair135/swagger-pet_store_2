@@ -1,9 +1,13 @@
 function loadSwagger(swaggerFile) {
-    // // Destroy the existing Swagger UI instance if it exists
-    // if (window.ui) {
-    //     window.ui.destroy();
-    // }
-    console.log(swaggerFile)
+
+    document.getElementById('home-link').style.display = 'block';
+
+    let swaggerLinks = document.getElementsByClassName("swagger-link");
+    [...swaggerLinks].forEach(link => {
+        link.style.display = 'none';
+    });
+
+
     // Load the new Swagger document
     window.ui = SwaggerUIBundle({
         url: swaggerFile,
